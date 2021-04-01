@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Lato',
+  sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -49,19 +60,57 @@
 }
 
 .LoginForm {
-  padding: 7rem;
+  position: relative;
+  padding: 6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .LoginFormLabel {
+  font-style: italic;
   color: rgba(154, 154, 154, 0.4) !important;
 }
 
 .LoginFormHeader {
   color: #4F4F4F;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.3571px;
+  line-height: 18px;
   text-shadow: 0px 4px 4px #00000044;
+}
+
+.InputPassword {
+  border-top: 0.853175px solid #DFE0EB !important;
+  border-left: 0.853175px solid #DFE0EB !important;
+  border-bottom: 0.853175px solid #DFE0EB !important;
+}
+
+.input-group-text {
+  border-top: 0.853175px solid #DFE0EB !important;
+  border-left: 0.853175px solid #DFE0EB !important;
+  border-bottom: 0.853175px solid #DFE0EB !important;
+}
+
+.InputEmail {
+  border: 0.853175px solid #DFE0EB !important;
+}
+
+.ForgotButton {
+  color: rgba(154, 154, 154, 0.4);
+  padding-left: 1rem;
+  border-left: 0.853175px solid #DFE0EB;
 }
 
 .SubmitButton {
   width: 100%;
   background-color: #ED1260;
 }
+
+.SubmitButton:hover {
+  background-color: #ed125fd0;
+}
+
+

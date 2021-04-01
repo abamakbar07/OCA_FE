@@ -8,7 +8,7 @@ const Login = () => {
    return (
      <div className="LandingPageLogin">
        <Row className="m-0">
-         <Col className="p-0" md={5}>
+         <Col className="p-0" md={5} style={{ zIndex: 1000}}>
            <div className="LoginContainer">
              <LoginForm />
            </div>
