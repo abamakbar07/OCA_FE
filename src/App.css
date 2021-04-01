@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.LandingPageLogo {
+  position: absolute;
+  height: 100vh;
+  right: 0px;
+}
+
+.LoginContainer {
+  background-color: #fff;
+  height: 100vh;
+}
+
+.LoginForm {
+  padding: 7rem;
+}
+
+.LoginFormLabel {
+  color: rgba(154, 154, 154, 0.4) !important;
+}
+
+.LoginFormHeader {
+  color: #4F4F4F;
+  text-shadow: 0px 4px 4px #00000044;
+}
+
+.SubmitButton {
+  width: 100%;
+  background-color: #ED1260;
+}
