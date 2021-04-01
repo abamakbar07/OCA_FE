@@ -1,6 +1,6 @@
 # OCA
 
-Ini adalah sebuah project technical test dari [Omni Comunnication Assistant](https://ocaindonesia.co.id/) sebagai salah satu syarat mengisi posisi sebagai FrontEnd Developer.
+Ini adalah sebuah project technical test dari [Omni Comunnication Assistant](https://ocaindonesia.co.id/) sebagai salah satu syarat perekrutan untuk mengisi posisi sebagai FrontEnd Developer.
 
 ## Available Scripts
 
