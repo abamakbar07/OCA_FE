@@ -88,7 +88,7 @@
   border-bottom: 0.853175px solid #DFE0EB !important;
 }
 
-.input-group-text {
+.LoginForm .input-group-text {
   border-top: 0.853175px solid #DFE0EB !important;
   border-left: 0.853175px solid #DFE0EB !important;
   border-bottom: 0.853175px solid #DFE0EB !important;
@@ -131,6 +131,7 @@
 .Sidebar {
   height: 100vh;
   background-color: #ED1260;
+  position: fixed;
 }
 
 .Home {
@@ -144,3 +145,132 @@
 .arrowDropdown {
   transition: transform .5s;
 }
+
+/* ============================================================================================================ */
+
+.Help {
+  font-style: italic;
+  border-top: 0.853175px solid #BBC1C8 !important;
+  border-right: 0.853175px solid #BBC1C8 !important;
+  border-bottom: 0.853175px solid #BBC1C8 !important;
+  width: 20rem !important;
+}
+
+.NavBar .input-group-text {
+  border-top: 0.853175px solid #BBC1C8 !important;
+  border-left: 0.853175px solid #BBC1C8 !important;
+  border-bottom: 0.853175px solid #BBC1C8 !important;
+  border-top-left-radius: .25rem !important;
+  border-bottom-left-radius: .25rem !important;
+}
+
+.HelpButton {
+  color: rgba(154, 154, 154, 0.4);
+  padding-left: .5rem;
+}
+
+.ProfileImageButton.main {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4F4F4F;
+}
+
+.ProfileImageButton.secondary {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #4F4F4F;
+}
+
+.ModalAlert .foreground {
+  background: #ED1260 !important;
+  height: 7px;
+  /* border-right: 0.853175px solid #DDDDE4 !important;
+  border-left: 0.853175px solid #DDDDE4 !important;
+  border-top: 0.853175px solid #DDDDE4 !important; */
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.ModalAlert .mainAlert a {
+  color:#ED1260;
+}
+
+.ModalAlert {
+  border: 0.853175px solid #DDDDE4 !important;
+  border-radius: 8px !important;
+}
+
+.QuotaInfo .Label {
+  color: #777777;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+.QuotaInfo .Label.Call {
+  color: #22B9FF;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+.QuotaInfo .Label.SMS {
+  color: #FFB822;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+.QuotaInfo .Label.Email {
+  color: #F554E9;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+.QuotaInfo .Label.Whatsapp {
+  color: #1DC9B7;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
+.RecentBlast h6 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ED1260;
+}
+
+.SortFilter {
+font-weight: 600;
+font-size: 9px;
+line-height: 20px;
+letter-spacing: 0.2px;
+color: #4B506D;
+}
+
+.SortFilter img {
+  width: 11px;
+}
+
+.RecentBlast thead {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #979797;
+}
+
+.RecentBlast tbody {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #3D3D3D;
+}
+
+/* .RecentBlast .idName {
+  width: 30px;
+} */
