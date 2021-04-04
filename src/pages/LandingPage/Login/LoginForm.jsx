@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { Form, Button, InputGroup } from 'react-bootstrap'
-import { user } from '../../../assets/dummyBlast'
+import { useHistory } from 'react-router-dom'
+import { user } from '../../../assets/dataDummy'
 import logo from '../../../assets/mainLogo.svg'
 import { AppContext } from '../../../components/context/GlobalContext'
 
 const LoginForm = () => {
+  const history = useHistory()
   const [state, dispatch] = useContext(AppContext)
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -25,6 +27,8 @@ const LoginForm = () => {
           fullname: user.fullname,
         },
       });
+    } else {
+      history.push("/dashboard")
     }
 
   }
@@ -66,13 +70,13 @@ const LoginForm = () => {
           </InputGroup.Append>
         </InputGroup>
       </Form.Group>
-      <Button
-        className="SubmitButton border-0"
+      <div
+        className="SubmitButton border-0 btn text-white"
         type="submit"
         onClick={getLogin}
       >
         sign in
-      </Button>
+      </div>
     </Form>
   );
 }

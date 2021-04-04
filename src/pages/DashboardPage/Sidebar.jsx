@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Collapse, Container, ListGroup } from 'react-bootstrap';
 import logo from "../../assets/secondaryLogo.svg";
 import home from "../../assets/icon/home.svg";
 import sms from "../../assets/icon/sms.svg";
 import arrow from "../../assets/icon/arrow.svg";
 import dropdownItem from "../../assets/icon/dropdown.svg";
+import { Link, useHistory } from 'react-router-dom';
 
 const Sidebar = () => {
-   const [open, setOpen] = useState(false);
+  const history = useHistory()
+  const path = history.location.pathname;
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (path != "/dashboard") {
+      setOpen(true)
+    }
+  }, [])
 
    return (
      <div className="Sidebar shadow p-3 mb-5">
@@ -17,13 +26,19 @@ const Sidebar = () => {
        <div className="Features pt-5">
          <ListGroup className="text-white">
            <ListGroup.Item className="bg-transparent border-0 pl-1 pr-1">
-             <Container className="HomeButton">
+             <Container
+               className="SidebarButton"
+               onClick={() => history.push("/dashboard")}
+             >
                <div className="d-block text-left">
                  <img src={home} />
                  <span className="align-baseline pl-2">Home</span>
                </div>
-               <div className="activePage mt-2"></div>
-               {/* activepage */}
+               <div
+                 className={
+                   path == "/dashboard" ? "activePage mt-2" : "d-none mt-2"
+                 }
+               ></div>
              </Container>
            </ListGroup.Item>
 
@@ -53,7 +68,6 @@ const Sidebar = () => {
                    </div>
                  </div>
                </div>
-               <div className="d-none mt-2"></div>
                {/* activepage */}
              </Container>
            </ListGroup.Item>
@@ -65,9 +79,15 @@ const Sidebar = () => {
                    <div className="d-block text-left">
                      <div className="d-flex" style={{ width: "100%" }}>
                        <img src={dropdownItem} />
-                       <div className="d-block pl-2 pt-3">
+                       <div className="SidebarButton d-block pl-2 pt-3">
                          <span className="">Broadcast</span>
-                         <div className="d-none pl-2 mt-1"></div>
+                         <div
+                           className={
+                             path == "/dashboard/Broadcast"
+                               ? "activePage mt-1 pl-2"
+                               : "d-none mt-1 pl-2"
+                           }
+                         ></div>
                          {/* activepage */}
                        </div>
                      </div>
@@ -79,9 +99,18 @@ const Sidebar = () => {
                    <div className="d-block text-left">
                      <div className="d-flex" style={{ width: "100%" }}>
                        <img src={dropdownItem} />
-                       <div className="d-block pl-2 pt-3">
+                       <div
+                         className="SidebarButton d-block pl-2 pt-3"
+                         onClick={() => history.push("/dashboard/SMS")}
+                       >
                          <span className="">SMS Scheduller</span>
-                         <div className="activePage pl-2 mt-1"></div>
+                         <div
+                           className={
+                             path == "/dashboard/SMS"
+                               ? "activePage mt-1 pl-2"
+                               : "d-none mt-1 pl-2"
+                           }
+                         ></div>
                          {/* activepage */}
                        </div>
                      </div>

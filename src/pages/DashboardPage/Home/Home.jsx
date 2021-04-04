@@ -4,7 +4,7 @@ import ModalAlert from '../../ModalAlert'
 import sort from '../../../assets/icon/sort.svg'
 import filter from '../../../assets/icon/filter.svg'
 import { Col, Container, Row, Table } from 'react-bootstrap';
-import { blastRecent } from '../../../assets/dummyBlast'
+import { blastRecent } from '../../../assets/dataDummy'
 
 const Home = () => {
   const [alert, setAlert] = useState(true);

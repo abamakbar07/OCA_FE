@@ -109,7 +109,7 @@
   background-color: #ED1260;
 }
 
-.SubmitButton:hover {
+.SubmitButton:hover, .SubmitButton:focus  {
   background-color: #ed125fd0;
 }
 
@@ -138,6 +138,10 @@
 
 .Home {
   height: 100%;
+}
+
+.SidebarButton {
+  cursor: pointer;
 }
 
 .FeatureButton {
@@ -195,6 +199,14 @@
   border-top-right-radius: 8px !important;
 }
 
+.mainAlert .Header {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.002em;
+  color: #312F30;
+}
+
 .ModalAlert .mainAlert a {
   color:#ED1260;
 }
@@ -203,6 +215,7 @@
   border: 0.853175px solid #DDDDE4 !important;
   border-radius: 8px !important;
 }
+
 
 .QuotaInfo .Label {
   color: #777777;

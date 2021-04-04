@@ -11,8 +11,8 @@ const ModalAlert = (props) => {
           onClose={props.showAlert}
           dismissible
         >
-          <Alert.Heading>{props.header}</Alert.Heading>
-          <p>{props.message}</p>
+          <Alert.Heading className="Header">{props.header}</Alert.Heading>
+          <p className="Body">{props.message}</p>
         </Alert>
       </div>
     </div>

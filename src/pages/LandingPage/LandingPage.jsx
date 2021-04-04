@@ -6,7 +6,6 @@ import Login from './Login/Login'
 const LandingPage = () => {
    const history = useHistory()
    const [state] = useContext(AppContext)
-   console.log(state)
 
    if (state.isLogin) history.push("/dashboard")
 

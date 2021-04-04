@@ -174,9 +174,9 @@ const SMSScheduler = () => {
                 </Row>
               </Col>
 
-              <Button className="SubmitButton border-0 ml-auto mt-5 col-3">
+              <div className="SubmitButton btn text-white border-0 ml-auto mt-5 col-3">
                 Send messages
-              </Button>
+              </div>
 
             </Row>
           </Form>

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import { user } from "./assets/dummyBlast";
+import { user } from "./assets/dataDummy";
 import { AppContext } from "./components/context/GlobalContext";
 import PrivateRoute from "./components/routes/PrivateRoute";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
@@ -36,7 +36,16 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <PrivateRoute path="/dashboard" exact component={DashboardPage} />
+          <PrivateRoute
+            path="/dashboard"
+            exact
+            component={() => <DashboardPage page="Home" />}
+          />
+          <PrivateRoute
+            path="/dashboard/SMS"
+            exact
+            component={() => <DashboardPage page="SMS" />}
+          />
         </Switch>
       </div>
     </Router>
