@@ -12,7 +12,7 @@ const Home = () => {
   const showAlert = () => setAlert(false);
 
    return (
-     <div className="Home bg-light">
+     <div className="Home">
        <NavBar />
 
        <Container className={alert ? "d-block" : "d-none"}>

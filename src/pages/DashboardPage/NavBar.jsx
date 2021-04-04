@@ -7,7 +7,7 @@ import profileImageDefault from "../../assets/icon/profileImageDefault.svg";
 const NavBar = () => {
    return (
      <div className="NavBar pt-5 pb-5">
-       <Navbar bg="white">
+       <Navbar>
          <Navbar.Collapse className="mr-auto" id="basic-navbar-nav">
            <Form inline>
              <Form.Group className="bg-transparent">
