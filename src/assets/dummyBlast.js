@@ -1,3 +1,9 @@
+export const user = {
+   fullname: "Muhamad Akbar Afriansyah",
+   email: "itsme@akbarafriansyah.my.id",
+   password: "1234"
+}
+
 export const blastRecent = [
    {
       idName: "MTN_EGY-LIFE",

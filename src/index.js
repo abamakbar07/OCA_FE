@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import { AppContextProvider } from './components/context/GlobalContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <AppContextProvider>
     <App />
-  </React.StrictMode>,
+  </AppContextProvider>,
   document.getElementById('root')
 );

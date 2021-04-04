@@ -13,7 +13,7 @@ const DashboardPage = () => {
          </Col>
          <Col className="p-0" sm={10}>
            <Home />
-           <MainFeatures />
+           {/* <MainFeatures /> */}
          </Col>
        </Row>
      </div>

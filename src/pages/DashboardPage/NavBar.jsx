@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Form, FormControl, InputGroup, Navbar, Row } from "react-bootstrap";
 
 import helpIcon from '../../assets/icon/help.svg'
 import profileImageDefault from "../../assets/icon/profileImageDefault.svg";
+import { AppContext } from '../../components/context/GlobalContext';
 
 const NavBar = () => {
+  const [state, dispatch] = useContext(AppContext)
+
+  const logout = () => {
+    dispatch({
+      type: "LOGOUT",
+    })
+  }
+
    return (
      <div className="NavBar pt-5 pb-5">
        <Navbar>
@@ -42,7 +51,7 @@ const NavBar = () => {
                </div>
              </Col>
              <Col>
-               <img src={profileImageDefault} />
+               <img src={profileImageDefault} onClick={logout} />
              </Col>
            </Row>
          </Navbar.Brand>

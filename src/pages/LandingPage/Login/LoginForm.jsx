@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Form, Button, InputGroup } from 'react-bootstrap'
+import { user } from '../../../assets/dummyBlast'
 import logo from '../../../assets/mainLogo.svg'
+import { AppContext } from '../../../components/context/GlobalContext'
 
 const LoginForm = () => {
+  const [state, dispatch] = useContext(AppContext)
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: ""
+  })
+
+  const onChange = (e) => {
+    setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
+  }
+
+  const getLogin = () => {
+    if (loginForm.email == user.email && loginForm.password == user.password ) {
+      dispatch({
+        type: "USER_LOGIN",
+        payload: {
+          login: true,
+          email: user.email,
+          fullname: user.fullname,
+        },
+      });
+    }
+
+  }
   return (
     <Form className="LoginForm text-left m-1">
       <div className="text-center">
@@ -16,25 +41,36 @@ const LoginForm = () => {
         <Form.Control
           className="InputEmail"
           type="email"
+          name="email"
           placeholder="Enter email"
-          value="Adjie_g4ant3ng@banget.com"
+          onChange={(e) => onChange(e)}
         />
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
         <Form.Label className="LoginFormLabel">Password</Form.Label>
         <InputGroup>
-          <Form.Control className="InputPassword border-0" type="password" placeholder="Password" value="delapan8" />
+          <Form.Control
+            className="InputPassword border-0"
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={(e) => onChange(e)}
+          />
           <InputGroup.Append>
             <InputGroup.Text id="basic-addon2" className="bg-transparent">
-              <div className="ForgotButton" style={{cursor: "pointer"}}>
+              <div className="ForgotButton" style={{ cursor: "pointer" }}>
                 Forgot?
               </div>
             </InputGroup.Text>
           </InputGroup.Append>
         </InputGroup>
       </Form.Group>
-      <Button className="SubmitButton border-0" type="submit">
+      <Button
+        className="SubmitButton border-0"
+        type="submit"
+        onClick={getLogin}
+      >
         sign in
       </Button>
     </Form>
