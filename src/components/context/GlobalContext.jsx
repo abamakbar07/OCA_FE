@@ -23,6 +23,10 @@ const reducer = (state, action) => {
       return {
         ...state,
         isLogin: true,
+        user: {
+          fullname: action.payload.fullname,
+          email: action.payload.email,
+        },
       };
     case "LOGIN_FAILED":
       return {
